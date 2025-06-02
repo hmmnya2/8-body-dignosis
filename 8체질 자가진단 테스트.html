@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>8체질 자가진단 테스트</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f8f8f8;
+      padding: 20px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .result {
+      margin-top: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>8체질 자가진단 테스트</h1>
+  <form id="testForm">
+    <div class="question">
+      <p>1. 나는 대체로 체온이 높은 편이다.</p>
+      <label><input type="radio" name="q1" value="금양,토양,목양,수양"> 그렇다</label><br/>
+      <label><input type="radio" name="q1" value="금음,토음,목음,수음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>2. 나는 성격이 활발하고 리더십이 있다.</p>
+      <label><input type="radio" name="q2" value="토양,토음,목양"> 그렇다</label><br/>
+      <label><input type="radio" name="q2" value="금음,수음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>3. 나는 위장이 튼튼하고 소화가 잘된다.</p>
+      <label><input type="radio" name="q3" value="토양,토음"> 그렇다</label><br/>
+      <label><input type="radio" name="q3" value="수양,수음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>4. 나는 기침이나 기관지 문제가 자주 있다.</p>
+      <label><input type="radio" name="q4" value="목양,목음"> 그렇다</label><br/>
+      <label><input type="radio" name="q4" value="금양,금음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>5. 나는 대체로 소심하고 감수성이 풍부한 편이다.</p>
+      <label><input type="radio" name="q5" value="금양,금음,수음"> 그렇다</label><br/>
+      <label><input type="radio" name="q5" value="목양,토양"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>6. 나는 열보다는 추위를 잘 탄다.</p>
+      <label><input type="radio" name="q6" value="금음,수음,목음"> 그렇다</label><br/>
+      <label><input type="radio" name="q6" value="금양,토양,수양"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>7. 나는 배가 자주 붓거나 소화불량이 있다.</p>
+      <label><input type="radio" name="q7" value="수양,수음"> 그렇다</label><br/>
+      <label><input type="radio" name="q7" value="토양,토음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>8. 나는 평소 예민하고 완벽주의적이다.</p>
+      <label><input type="radio" name="q8" value="금음,목음"> 그렇다</label><br/>
+      <label><input type="radio" name="q8" value="토음,목양"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>9. 나는 감정 기복이 크다.</p>
+      <label><input type="radio" name="q9" value="수양,수음,목음"> 그렇다</label><br/>
+      <label><input type="radio" name="q9" value="금양,금음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>10. 나는 키가 크고 마른 체형이다.</p>
+      <label><input type="radio" name="q10" value="금양,목음"> 그렇다</label><br/>
+      <label><input type="radio" name="q10" value="토음,수음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>11. 나는 고기보다 곡류나 채소를 더 선호한다.</p>
+      <label><input type="radio" name="q11" value="수양,금음,수음"> 그렇다</label><br/>
+      <label><input type="radio" name="q11" value="토양,목양"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>12. 나는 스트레스를 받으면 설사나 복통이 있다.</p>
+      <label><input type="radio" name="q12" value="목음,수양"> 그렇다</label><br/>
+      <label><input type="radio" name="q12" value="금양,토음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>13. 나는 소변을 자주 보거나 몸이 잘 붓는다.</p>
+      <label><input type="radio" name="q13" value="토양,토음,수양,수음"> 그렇다</label><br/>
+      <label><input type="radio" name="q13" value="금양,목양"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>14. 나는 리더십이 있지만 무뚝뚝하단 얘기를 자주 듣는다.</p>
+      <label><input type="radio" name="q14" value="토양,금양"> 그렇다</label><br/>
+      <label><input type="radio" name="q14" value="수음,목음"> 아니다</label>
+    </div>
+
+    <div class="question">
+      <p>15. 나는 사람들과 어울리는 것을 좋아하고 유머감각이 있다는 말을 듣는다.</p>
+      <label><input type="radio" name="q15" value="목양,목음"> 그렇다</label><br/>
+      <label><input type="radio" name="q15" value="금음,수음"> 아니다</label>
+    </div>
+
+    <button type="button" onclick="calculateResult()">결과 보기</button>
+  </form>
+
+  <div class="result" id="resultBox" style="display:none;"></div>
+
+  <script>
+    const descriptions = {
+      "금양": `체형: 키 크고 마른 체형, 납작한 가슴, 팔다리 길음<br/>
+              성격: 꼼꼼, 신중, 예민, 감수성 풍부<br/>
+              신체: 폐 강함, 심장 약함 → 두근거림 주의<br/>
+              권장: 차고 습한 음식 / 피할 것: 맵고 뜨거운 음식`,
+      "금음": `체형: 키 작고 마름, 눈이 크고 얼굴이 밝음<br/>
+              성격: 급하고 예민, 완벽주의 성향<br/>
+              신체: 대장 강하고 심장 약함<br/>
+              권장: 고구마, 보리, 탕류 / 피할 것: 튀김, 수박, 후추`,
+      "토양": `체형: 어깨 넓고 근육 발달<br/>
+              성격: 활동적, 추진력 강함<br/>
+              신체: 비장 강하고 신장 약함<br/>
+              권장: 해조류, 오이 / 피할 것: 장아찌, 튀김`,
+      "토음": `체형: 통통하고 배가 나옴<br/>
+              성격: 적극적, 리더십 강함<br/>
+              신체: 위는 강하나 신장이 약함<br/>
+              권장: 곡류, 호박 / 피할 것: 술, 장아찌, 튀김`,
+      "목양": `체형: 건장하고 어깨 넓고 다리 튼튼<br/>
+              성격: 사교적, 유머 감각 뛰어남<br/>
+              신체: 간 강하고 폐 약함 (기침 잦음)<br/>
+              권장: 수박, 배 / 피할 것: 삼겹살, 술`,
+      "목음": `체형: 키 크고 마름, 팔다리 길고 얼굴형 길다<br/>
+              성격: 사교적이나 예민한 편<br/>
+              신체: 담낭 강하나 대장 약해 설사, 복통 주의<br/>
+              권장: 녹두, 귤, 레몬 등`,
+      "수양": `체형: 가늘고 추위에 약함<br/>
+              성격: 감정 기복 큼, 내성적<br/>
+              신체: 위장 약하고 심장도 약한 편<br/>
+              권장: 따뜻하고 소화 잘되는 음식`,
+      "수음": `체형: 냉한 편, 살 찌기 쉬움<br/>
+              성격: 예민하고 감수성 풍부<br/>
+              신체: 신장 약하고 소화 기능 떨어짐<br/>
+              권장: 따뜻한 곡물차, 고구마 등 / 피할 것: 찬 음식`
+    };
+
+    function calculateResult() {
+      const form = document.forms["testForm"];
+      const resultBox = document.getElementById("resultBox");
+      const scores = {
+        "금양": 0, "금음": 0,
+        "토양": 0, "토음": 0,
+        "목양": 0, "목음": 0,
+        "수양": 0, "수음": 0
+      };
+
+      for (let i = 1; i <= 15; i++) {
+        const answer = form[`q${i}`].value;
+        if (answer) {
+          answer.split(",").forEach(type => {
+            scores[type] += 1;
+          });
+        }
+      }
+
+      const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+      const topType = sorted[0][0];
+      resultBox.innerHTML = `<h2>당신은 <strong>${topType}</strong> 체질입니다.</h2><p>${descriptions[topType]}</p>`;
+      resultBox.style.display = "block";
+    }
+  </script>
+</body>
+</html>
